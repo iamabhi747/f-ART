@@ -1,4 +1,4 @@
 
 camvas = document.createElement("CANVAS")
-canvas.style.height = "500px"
-canvas.style.width  = "500px"
+canvas.style.height = window.innerHeight + "px"
+canvas.style.width  = window.innerWidth  + "px"
