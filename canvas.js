@@ -16,6 +16,7 @@ var ctx = canvas.getContext("2d")
 
 ctx.fillStyle = "#000"
 ctx.rect(0, 0, canvas.width, canvas.height)
+ctx.fill()
 
 
 // whiteboard setup
@@ -25,7 +26,7 @@ var X,Y;
 var pathlib = [] // all prv completed path librery
 var path    = [] // current path
 
-var linewidth   = 2
+var linewidth   = 5
 var strokeStyle = "#fff"
 
 
@@ -58,12 +59,12 @@ $(canvas).mousemove(
             X = e.pageX - canvas.offsetLeft;
 		    Y = e.pageY - canvas.offsetTop;
 
-            ctx.lineTo(X, Y)
-            path.push([X, Y])
-
             ctx.linewidth   = linewidth
             ctx.strokeStyle = strokeStyle
+            ctx.lineTo(X, Y)
 			ctx.stroke();
+
+            path.push([X, Y])
 
         }
     }
