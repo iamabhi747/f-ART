@@ -58,7 +58,7 @@ $(canvas).mousemove(
             X = e.pageX - canvas.offsetLeft;
 		    Y = e.pageY - canvas.offsetTop;
 
-            ctx.lineto(X, Y)
+            ctx.lineTo(X, Y)
             path.push([X, Y])
 
             ctx.linewidth   = linewidth
@@ -78,6 +78,6 @@ $(canvas).mouseup(
         ctx.closePath();
         pathlib.push(path)
         console.log(path)
-        
+
     }
 )
