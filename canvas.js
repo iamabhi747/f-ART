@@ -40,8 +40,8 @@ $(canvas).mousedown(
         isDown = true
         ctx.beginPath()
 
-        X = e.pageX - canvas.offsetLeft;
-		Y = e.pageY - canvas.offsetTop;
+        X = e.pageX //- canvas.offsetLeft;
+		Y = e.pageY //- canvas.offsetTop;
 		ctx.moveTo(X, Y);
 
         path = [[X,Y]]
@@ -56,8 +56,8 @@ $(canvas).mousemove(
 
             // draw
 
-            X = e.pageX - canvas.offsetLeft;
-		    Y = e.pageY - canvas.offsetTop;
+            X = e.pageX //- canvas.offsetLeft;
+		    Y = e.pageY //- canvas.offsetTop;
 
             ctx.linewidth   = linewidth
             ctx.strokeStyle = strokeStyle
