@@ -26,7 +26,7 @@ var X,Y;
 var pathlib = [] // all prv completed path librery
 var path    = [] // current path
 
-var linewidth   = 1
+var linewidth   = 1.0
 var strokeStyle = "#fff"
 
 var bound_rect = canvas.getBoundingClientRect()
@@ -46,6 +46,7 @@ $(canvas).mousedown(
         isDown        = true
         ctx.lineWidth = linewidth
         ctx.beginPath()
+        ctx.lineWidth = linewidth
 
         X = e.clientX * width_ratio
 		Y = e.clientY * height_ratio
