@@ -14,7 +14,7 @@ var ctx = canvas.getContext("2d")
 
 // background
 
-ctx.fillStyle = "#fff"
+ctx.fillStyle = "#000"
 ctx.rect(0, 0, canvas.width, canvas.height)
 ctx.fill()
 
@@ -26,8 +26,8 @@ var X,Y;
 var pathlib = [] // all prv completed path librery
 var path    = [] // current path
 
-var linewidth   = 5
-var strokeStyle = "#000"
+var linewidth   = 1
+var strokeStyle = "#fff"
 
 
 // mouse magic
@@ -40,8 +40,8 @@ $(canvas).mousedown(
         isDown = true
         ctx.beginPath()
 
-        X = e.pageX //- canvas.offsetLeft;
-		Y = e.pageY //- canvas.offsetTop;
+        X = e.clientX //- canvas.offsetLeft;
+		Y = e.clientY //- canvas.offsetTop;
 		ctx.moveTo(X, Y);
 
         path = [[X,Y]]
@@ -56,10 +56,10 @@ $(canvas).mousemove(
 
             // draw
 
-            X = e.pageX //- canvas.offsetLeft;
-		    Y = e.pageY //- canvas.offsetTop;
+            X = e.clientX //- canvas.offsetLeft;
+		    Y = e.clientY //- canvas.offsetTop;
 
-            ctx.linewidth   = linewidth
+            ctx.linewidth   = linewidth + "px"
             ctx.lineTo(X, Y)
             ctx.strokeStyle = strokeStyle
 			ctx.stroke();
