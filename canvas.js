@@ -43,7 +43,8 @@ $(canvas).mousedown(
 
         // start drawing 
 
-        isDown = true
+        isDown        = true
+        ctx.lineWidth = linewidth
         ctx.beginPath()
 
         X = e.clientX * width_ratio
@@ -65,7 +66,9 @@ $(canvas).mousemove(
             X = e.clientX * width_ratio
 		    Y = e.clientY * height_ratio
 
-            ctx.lineWidth   = linewidth
+            ctx.lineCap     = 'round'
+            ctx.lineJoin    = 'round'
+
             ctx.lineTo(X, Y)
             ctx.strokeStyle = strokeStyle
 			ctx.stroke();
