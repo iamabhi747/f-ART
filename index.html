@@ -5,6 +5,29 @@
         <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
     </head>
     <body>
+
+        <div id="workbench">
+            
+            <select onchange="setWorkbench(this.value)">
+                <option>drawing</option>
+                <option>test</option>
+            </select>
+
+            <div id="workbench-container">
+                
+                <div id="workbench-drawing">
+                    // Drawing
+                </div>
+
+                <div id="workbench-test" style="display: none;">
+                    // TEST
+                </div>
+
+            </div>
+
+        </div>
+        <script src="workbench.js"></script>
         <script src="canvas.js" ></script>
+        <script src="drawing.js"></script>
     </body>
 </html>
