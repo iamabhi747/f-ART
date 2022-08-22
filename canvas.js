@@ -1,8 +1,8 @@
 // setting up canvas
 
 var canvas = document.createElement("CANVAS")
-canvas.height = window.innerHeight         + "px"
-canvas.width  = (window.innerWidth - 300)  + "px"
+canvas.height = window.innerHeight 
+canvas.width  = (window.innerWidth - 300)
 
 document.body.style.margin   = "0"
 document.body.style.overflow = "hidden"
