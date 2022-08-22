@@ -14,7 +14,7 @@ var ctx = canvas.getContext("2d")
 
 // background
 
-ctx.fillStyle = "#000"
+ctx.fillStyle = "#fff"
 ctx.rect(0, 0, canvas.width, canvas.height)
 ctx.fill()
 
@@ -27,7 +27,7 @@ var pathlib = [] // all prv completed path librery
 var path    = [] // current path
 
 var linewidth   = 5
-var strokeStyle = "#fff"
+var strokeStyle = "#000"
 
 
 // mouse magic
