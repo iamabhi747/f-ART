@@ -65,7 +65,7 @@ $(canvas).mousemove(
             X = e.clientX * width_ratio
 		    Y = e.clientY * height_ratio
 
-            ctx.linewidth   = linewidth + "px"
+            ctx.lineWidth   = linewidth
             ctx.lineTo(X, Y)
             ctx.strokeStyle = strokeStyle
 			ctx.stroke();
