@@ -60,8 +60,8 @@ $(canvas).mousemove(
 		    Y = e.pageY //- canvas.offsetTop;
 
             ctx.linewidth   = linewidth
-            ctx.strokeStyle = strokeStyle
             ctx.lineTo(X, Y)
+            ctx.strokeStyle = strokeStyle
 			ctx.stroke();
 
             path.push([X, Y])
