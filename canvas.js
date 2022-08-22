@@ -29,6 +29,12 @@ var path    = [] // current path
 var linewidth   = 1
 var strokeStyle = "#fff"
 
+var bound_rect = canvas.getBoundingClientRect()
+
+var width_ratio  = canvas.width  / bound_rect.width
+var height_ratio = canvas.height / bound_rect.height
+
+
 
 // mouse magic
 
@@ -40,8 +46,8 @@ $(canvas).mousedown(
         isDown = true
         ctx.beginPath()
 
-        X = e.clientX //- canvas.offsetLeft;
-		Y = e.clientY //- canvas.offsetTop;
+        X = e.clientX * width_ratio
+		Y = e.clientY * height_ratio
 		ctx.moveTo(X, Y);
 
         path = [[X,Y]]
@@ -56,8 +62,8 @@ $(canvas).mousemove(
 
             // draw
 
-            X = e.clientX //- canvas.offsetLeft;
-		    Y = e.clientY //- canvas.offsetTop;
+            X = e.clientX * width_ratio
+		    Y = e.clientY * height_ratio
 
             ctx.linewidth   = linewidth + "px"
             ctx.lineTo(X, Y)
